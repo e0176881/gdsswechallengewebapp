@@ -36,16 +36,23 @@ export class UserspageComponent implements OnInit {
 
   showSuccess(val) {
     let limitMsg = "";
+    let sortMsg = "";
     if (val.limit !== "") {
       limitMsg = val.limit;
     } else {
       limitMsg = "No Limit";
     }
+
+    if (val.sort !== "") {
+      sortMsg = val.sort;
+    } else {
+      sortMsg = "No Sort";
+    }
     const uploadParams = `min: ${val.min} `
       + `max: ${val.max} `
       + `limit: ${limitMsg} `
       + `offset: ${val.offset} `
-      + `sort: ${val.sort} `
+      + `sort: ${sortMsg} `
     this.toastr.success(uploadParams, "Submitted ", {timeOut: 5000});
   }
 
