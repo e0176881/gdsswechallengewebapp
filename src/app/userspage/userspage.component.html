@@ -1,0 +1,53 @@
+<div class="card m-3">
+  <h5 class="card-header">Get Users</h5>
+  <div class="card-body">
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+
+      <div class="row">
+
+        <div class="col-sm-4 form-group">
+          <label>Min</label>
+          <input type="number" min=0 onkeyup="if(this.value<0) {this.value = this.value*-1}"  formControlName="min" class="form-control"  placeholder="0.0" />
+
+        </div>
+        <div class="col-sm-4 form-group">
+          <label>Max</label>
+          <input type="number" min=0 onkeyup="if(this.value<0) {this.value = this.value*-1}" formControlName="max" class="form-control" placeholder="4000.0" />
+
+        </div>
+
+        <div class="col-sm-4 form-group">
+          <label>Limit</label>
+          <input type="number" min=0 onkeyup="if(this.value<0) {this.value = this.value*-1}" formControlName="limit" class="form-control" placeholder="No Limit"  />
+
+        </div>
+
+        <div class="col-sm-4 form-group">
+          <label>Offset</label>
+          <input type="number" min=0 onkeyup="if(this.value<0) {this.value = this.value*-1}" formControlName="offset" class="form-control" placeholder="0" />
+
+        </div>
+        <div class="col-sm-4 form-group">
+          <label>Sort</label>
+          <select formControlName="sort" class="form-control" [value]="">
+            <option value="">No Sort</option>
+            <option value="Name">Name</option>
+            <option value="Salary">Salary</option>
+          </select>
+        </div>
+      </div>
+
+<br/>
+
+      <div class="text-center">
+        <button class="btn btn-primary mr-1" type="submit" > Get Users</button>
+        &nbsp;
+        <button class="btn btn-secondary" type="reset" (click)="reset()">Reset</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<app-userstable  *ngIf="userDetailResp" [userList]="userDetailResp.results"></app-userstable>
+
+
