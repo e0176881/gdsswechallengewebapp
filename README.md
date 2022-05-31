@@ -19,7 +19,7 @@ npm i
  ```bash
 ng serve
 ``` 
-5. it should navigate to `http://localhost:4200/`
+5. open up browser and navigate to `http://localhost:4200/`
 6. Upload the happyPath.csv file (found in root directory) from the web UI and John's salary should be updated from 2000 to 200
 Bob's record will be ignored (skipped) since his salary is a negative value.
 Alice's and Charles' salary will be inserted accordingly to 0 and 3999 respectively.
