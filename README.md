@@ -20,8 +20,12 @@ npm i
 ng serve
 ``` 
 5. open up browser and navigate to `http://localhost:4200/`
-6. Upload the happyPath.csv file (found in root directory) from the web UI and John's salary should be updated from 2000 to 200
+6. Click on Get Users Button to retrieve users with a min of 0 and max of 4000 (default)
+7. You should see that John's salary is 2000 and John 2's salary is 4000.
+8. Upload the happyPath.csv file (found in root directory) from the web UI and John's salary should be updated from 2000 to 200
 Bob's record will be ignored (skipped) since his salary is a negative value.
 Alice's and Charles' salary will be inserted accordingly to 0 and 3999 respectively.
-6. Upload the unhappyPath.csv file (found in root directory) from the web UI and all rows will not be updated/inserted into the database
+9. Verify the result by clicking on Get Users button again.
+10. Upload the unhappyPath.csv file (found in root directory) from the web UI and all rows will not be updated/inserted into the database
 as one of the values has invalid input and this is deemed to be a improperly structured CSV file, which should be rejected.
+11. You can also submit your own csv file and verify the records by using the Get Users UI.
